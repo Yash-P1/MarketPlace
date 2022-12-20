@@ -1,15 +1,14 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import "../../App.css"
 
 export const CartItem: React.FC<any> = (props) => {
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
 
-  //console.log("cartItems ID: ", props.obj['id']);
-
   return (
     <div className="cartItem">
-      <img src={props.obj["thumbnail"]} />
+      <img src={props.obj["thumbnail"]} alt="" />
       <div className="description">
         <p>
           <b>{props.obj["title"]}</b>

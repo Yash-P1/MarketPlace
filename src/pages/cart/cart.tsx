@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "./cart-item";
 import { useAxios } from "../../services/useAxios";
-import "./cart.css";
 import { useNavigate } from "react-router-dom";
 
 export interface IitemProps {
@@ -44,7 +43,7 @@ export const Cart: React.FC = () => {
           {data["products"].map((product) => {
             if (cartItems[product["id"]] !== 0) {
               return <CartItem obj={product} />;
-            }
+            } else return null;
           })}
         </div>
         <button onClick={() => navigate("/")}> Continue Shopping </button>

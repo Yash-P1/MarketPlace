@@ -12,7 +12,8 @@ export const useAxios = <T>(
   useEffect(() => {
     if (loadOnStart) sendRequest();
     else setLoading(false);
-  }, [])
+  }, []);
+
   const request = () => {
     sendRequest();
   };
