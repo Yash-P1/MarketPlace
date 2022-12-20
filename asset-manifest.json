@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MarketPlace/static/css/main.79b45fa7.css",
+    "main.js": "/MarketPlace/static/js/main.fa0c860c.js",
+    "static/js/787.c23b093c.chunk.js": "/MarketPlace/static/js/787.c23b093c.chunk.js",
+    "index.html": "/MarketPlace/index.html",
+    "main.79b45fa7.css.map": "/MarketPlace/static/css/main.79b45fa7.css.map",
+    "main.fa0c860c.js.map": "/MarketPlace/static/js/main.fa0c860c.js.map",
+    "787.c23b093c.chunk.js.map": "/MarketPlace/static/js/787.c23b093c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79b45fa7.css",
+    "static/js/main.fa0c860c.js"
+  ]
+}
