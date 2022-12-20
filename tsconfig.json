@@ -18,7 +18,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // typescript-ts7006-parameter-xxx-implicitly-has-an-any-type
+    "noImplicitAny": false
   },
   "include": [
     "src"
