@@ -7,18 +7,17 @@ export const Navbar = () => {
     <div className="bg-gray-800 mx-auto max-w-10xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
         {/* Logo */}
-        <Link to="/" className="text-white text-2xl font-semibold flex items-center">
-          {/* Emoji represents a shopping cart */}
-          <span className="mr-2">🛍</span>MarketPlace
+        <Link
+          to="/"
+          className="text-white text-2xl font-semibold flex items-center"
+        >
+          Furniture MarketPlace
         </Link>
-        
+
         {/* Navigation Links (hidden on small screens) */}
         <div className="hidden md:flex space-x-4">
-          <Link to="/" className="text-white hover:text-gray-300">
-            Home
-          </Link>
-          <Link to="/products" className="text-white hover:text-gray-300">
-            Products
+          <Link to="/get-prices" className="text-white hover:text-gray-300">
+            Get Prices
           </Link>
           <Link to="/about" className="text-white hover:text-gray-300">
             About
@@ -27,7 +26,7 @@ export const Navbar = () => {
             Contact
           </Link>
         </div>
-        
+
         {/* Shopping Cart Link */}
         <Link to="/cart" className="text-white flex items-center">
           {/* ShoppingCart icon from Phosphor */}

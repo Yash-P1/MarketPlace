@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 export const useAxios = <T>(
   config: AxiosRequestConfig<any>,
   loadOnStart: boolean = true
-): [boolean, T | undefined, string, () => void] => {
+): [boolean, T[], string, () => void] => {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<T>();
+  const [data, setData] = useState<T[]>([]); // Provide an initial value of an empty array
   const [error, setError] = useState("");
 
   useEffect(() => {

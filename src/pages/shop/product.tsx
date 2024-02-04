@@ -15,7 +15,7 @@ export const Product: FC<any> = (props) => {
       <div className="bg-gray-200 rounded-md overflow-hidden">
         {/* Product image */}
         <img
-          src={props.obj["thumbnail"]}
+          src={props.obj["category"]["image"]}
           alt=""
           className="w-full h-36 object-cover"
         />

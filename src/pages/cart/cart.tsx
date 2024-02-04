@@ -5,23 +5,30 @@ import { useAxios } from "../../services/useAxios";
 import { useNavigate } from "react-router-dom";
 
 export interface IitemProps {
-  brand: string;
-  category: string;
+  // brand: string;
+  // category: string;
+  // description: string;
+  // discountPercentage: number;
+  // id: number;
+  // images: string[];
+  // price: number;
+  // rating: number;
+  // stock: number;
+  // thumbnail: string;
+  // title: string;
+  id: number;
+  title: string;
+  price: number;
   description: string;
   discountPercentage: number;
-  id: number;
-  images: string[];
-  price: number;
   rating: number;
-  stock: number;
-  thumbnail: string;
-  title: string;
+  category: object;
 }
 
 export const Cart: React.FC = () => {
   const [loading, data, error] = useAxios<IitemProps>({
     method: "GET",
-    url: "https://dummyjson.com/products?limit=10",
+    url: "https://api.escuelajs.co/api/v1/products?limit=10&offset=0",
   });
 
   const { cartItems } = useContext(ShopContext);
@@ -48,9 +55,9 @@ export const Cart: React.FC = () => {
         </div>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {/* Mapping through filtered cart items and rendering CartItem component */}
-          {cartItemsToDisplay.map((product) => (
+          {/* {cartItemsToDisplay.map((product) => (
             <CartItem key={product.id} obj={product} />
-          ))}
+          ))} */}
         </div>
         {/* Continue Shopping button */}
         <button

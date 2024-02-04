@@ -4,18 +4,12 @@ import { ShopContextProvider } from "../../context/shop-context";
 import { useAxios } from "../../services/useAxios";
 
 export interface IitemProps {
-  // Product properties
-  brand: string;
-  category: string;
-  description: string;
-  discountPercentage: number;
   id: number;
-  images: string[];
-  price: number;
-  rating: number;
-  stock: number;
-  thumbnail: string;
   title: string;
+  price: number;
+  description: string;
+  rating: number;
+  category: object;
 }
 
 // Shop component displays a list of products
@@ -23,7 +17,7 @@ export const Shop: React.FC = () => {
   // Fetching product data using Axios
   const [loading, data, error] = useAxios<IitemProps>({
     method: "GET",
-    url: "https://dummyjson.com/products?limit=10",
+    url: "https://api.escuelajs.co/api/v1/products",
   });
 
   if (loading) return <p>Loading ....</p>;
@@ -34,10 +28,13 @@ export const Shop: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="text-center text-2xl font-bold my-4">
+        Online Listings
+      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {/* Mapping through product data and rendering Product component */}
-          {data["products"].map((product) => (
+          {data.map((product) => (
             <Product key={product.id} obj={product} />
           ))}
         </div>
